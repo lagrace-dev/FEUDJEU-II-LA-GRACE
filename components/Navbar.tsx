@@ -64,7 +64,7 @@ export default function Navbar() {
           {/* BOUTON DROITE */}
           <div className="navbar-end gap-3">
             <Link href="/" className="btn btn-primary-btn btn-sm">Accueil</Link>
-            <Link href="/Creer" className="btn btn-outline btn-sm">Creer</Link>
+            <Link href="/Connexion" className="btn btn-outline btn-sm">Creer</Link>
             <Link href="/Articles" className="btn btn-outline btn-sm">Articles</Link>
           </div>
 

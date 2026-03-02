@@ -61,7 +61,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         <div className="badge badge-secondary">{article.category}</div>
         <p className="line-clamp-3">{article.content}</p>
         <div className="card-actions justify-end">
-          <Link href={`/articles/${article.id}`}>
+          <Link href={`/Articles/${article.id}`}>
   <button className="btn btn-outline btn-sm">
     Lire plus
   </button>

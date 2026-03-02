@@ -348,9 +348,18 @@ export const articles:Article[] = [
     id: 10,
     title: "My Dress Up Darling",
     author: "Yuki Kajiura",
-    category: "isekai",
+    category: "Shojo",
     cover: "https://http2.mlstatic.com/D_NQ_NP_658963-MLM83408101551_032025-O.webp",
     content: "Un lycéen passionné de couture rencontre une camarade de classe qui veut devenir cosplayeuse...",
     excerpt: "Un lycéen passionné de couture rencontre une camarade de classe qui veut devenir cosplayeuse. Le jeune Masaki Hayashi est un lycéen qui, après avoir été invité à participer à un concours de cosplay, se retrouve à côtoyer une jeune fille qui rêve de devenir cosplayeuse. Une histoire pleine d'humour et d'émotion."
-  }
+  },
+  {
+    id: 11,
+    title: "Re:Zero",
+    author: "Takumi Sato",
+    category: "Isekai",
+    cover: "https://tse1.explicit.bing.net/th/id/OIP.vLmrzuH1ko-3NiHXx2uPIgHaEc?rs=1&pid=ImgDetMain&o=7&rm=3",
+    content: "Un jeune homme est transporté dans un monde fantastique où il doit recommencer sa vie à chaque fois qu'il meurt...",
+    excerpt: "Un jeune homme est transporté dans un monde fantastique où il doit recommencer sa vie à chaque fois qu'il meurt. Le jeune Subaru Natsuki est un lycéen qui, après avoir été transporté dans un monde fantastique, doit survivre à des situations extrêmes et découvrir les secrets de ce monde. Une histoire pleine de mystère, d'action, et de réflexion."
+  },
 ];
