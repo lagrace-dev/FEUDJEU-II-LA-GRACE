@@ -3,11 +3,12 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-export default function ConnexionPage() {
+export default function Inscription() {
   const router = useRouter();
   const [formData, setFormData] = useState({
     nom: "",
     prenom: "",
+    téléphone: "",
     email: "",
     password: ""
   });
@@ -20,7 +21,7 @@ export default function ConnexionPage() {
     e.preventDefault();
 
     // Afficher l'alerte avec les données JSON
-    alert("Connexion réussie !\n\n" + JSON.stringify(formData, null, 2));
+    alert("Inscription réussie !\n\n" + JSON.stringify(formData, null, 2));
     console.log("Données du formulaire :", JSON.stringify(formData, null, 2));
 
     // Rediriger vers la page de création
@@ -32,10 +33,10 @@ export default function ConnexionPage() {
       <div className="card w-full max-w-md bg-base-100 shadow-xl rounded-lg bg-gradient-to-r from-blue-100 to-pink-150">
         <div className="card-body">
           <h2 className="card-title text-2xl font-bold text-center justify-center mb-2">
-            Connexion Auteur
+            Nouvel Auteur
           </h2>
           <p className="text-center text-base-content/60 mb-6">
-            Connectez-vous pour créer un article
+            Inscrivez vous pour ajouter un article
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -71,6 +72,21 @@ export default function ConnexionPage() {
               />
             </div>
 
+            {/* Téléphone */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-medium">Tel *</span>
+              </label>
+              <input
+                type="tel"
+                name="téléphone"
+                placeholder="Votre numéro de téléphone"
+                className="input input-bordered w-full rounded-full"
+                value={formData.téléphone}
+                onChange={handleChange}
+                required
+              />
+            </div>
             {/* Email */}
             <div className="form-control">
               <label className="label">
@@ -79,38 +95,38 @@ export default function ConnexionPage() {
               <input
                 type="email"
                 name="email"
-                placeholder="votre@email.com"
+                placeholder="Votre adresse email"
                 className="input input-bordered w-full rounded-full"
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
             </div>
-               {/* mot de passe */}
+
+            {/* Mot de passe */}
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-medium">Password*</span>
+                <span className="label-text font-medium">Mot de passe *</span>
               </label>
               <input
                 type="password"
                 name="password"
-                placeholder="****"
+                placeholder="Votre mot de passe"
                 className="input input-bordered w-full rounded-full"
-                value={formData.email}
+                value={formData.password}
                 onChange={handleChange}
                 required
               />
             </div>
 
-
             {/* Bouton de connexion */}
             <div className="form-control mt-6">
-              <button type="submit" className="btn btn-primary w-full bg-blue-300 hover:bg-blue-700 rounded-lg">
-                Se connecter
+              <button type="submit" className="btn btn-primary w-full bg-blue-400 hover:bg-blue-800 rounded-lg">
+                inscription
               </button>
             </div>
-            <Link href="/Inscription" className="text-center text-blue-500 hover:underline mt-2">
-              Pas encore inscrit ? Créez un compte pour écrire! 
+            <Link href="/Connexion" className="text-center text-blue-500 hover:underline mt-2">
+              Déjà inscrit ? Connectez-vous
             </Link>
           </form>
         </div>

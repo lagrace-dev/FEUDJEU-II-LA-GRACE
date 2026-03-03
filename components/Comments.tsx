@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Comment {
   id: number;
@@ -18,7 +18,25 @@ interface CommentsProps {
 }
 
 export default function Comments({ articleId }: CommentsProps) {
+  //const [comments, setComments] = useState<Comment[]>([]);
   const [comments, setComments] = useState<Comment[]>([]);
+
+useEffect(() => {
+  const stored = localStorage.getItem(`comments-${articleId}`);
+  if (stored) {
+    setComments(JSON.parse(stored));
+  }
+}, [articleId]);
+// const [comments, setComments] = useState<Comment[]>(() => {
+//   if (typeof window !== "undefined") {
+//     const stored = localStorage.getItem(`comments-${articleId}`);
+//     return stored ? JSON.parse(stored) : [];
+//   }
+//   return [];
+// });
+useEffect(() => {
+  localStorage.setItem(`comments-${articleId}`, JSON.stringify(comments));
+}, [comments, articleId]);
   const [form, setForm] = useState({ author: "", content: "" });
 
   const avatarColors = [
@@ -108,8 +126,8 @@ export default function Comments({ articleId }: CommentsProps) {
   };
 
   return (
-    <div className="mt-10">
-      <div className="flex items-center gap-3 mb-8">
+    <div className="mt-10 border-t border-base-300 bg-base-100 p-6 rounded-lg shadow-sm bg-blue-200">
+      <div className="flex items-center gap-3 mb-8 bg-gradient-to-r from-red-100 to-red-200 p-4 rounded-lg shadow-sm">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
         </svg>
@@ -121,7 +139,7 @@ export default function Comments({ articleId }: CommentsProps) {
       {/* Formulaire d'ajout */}
       <form
         onSubmit={handleSubmit}
-        className="card bg-gradient-to-br from-base-200 to-base-100 border border-base-300 p-6 mb-8 space-y-4 shadow-sm"
+        className="card bg-gradient-to-br from-blue-90 to-base-100 border border-base-300 p-6 mb-8 space-y-4 shadow-sm"
       >
         <h4 className="font-semibold text-lg flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -143,6 +161,7 @@ export default function Comments({ articleId }: CommentsProps) {
             <input
               type="text"
               name="author"
+              
               placeholder="Entrez votre nom"
               className="input input-bordered w-full pl-10"
               value={form.author}

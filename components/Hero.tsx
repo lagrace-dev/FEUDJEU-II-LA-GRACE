@@ -4,7 +4,7 @@ import React from 'react'
 const Hero = () => {
   return (
     <div
-  className="hero min-h-screen"
+  className="hero min-h-screen mt-18 rounded-lg"
   style={{
     backgroundImage:
       "url(https://wallpapercave.com/wp/wp15042428.jpg)",
@@ -13,8 +13,8 @@ const Hero = () => {
   <div className="hero-overlay"></div>
   <div className="hero-content text-neutral-content text-center">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">
+      <h1 className="mb-5 text-5xl font-bold">LG*ANIME</h1>
+      <p className="mb-5 text-lg">
         Notre blog dédié aux mangas et aux animes est un espace passionnant où les amateurs de ces univers captivants peuvent se retrouver pour partager leur amour pour les histoires, les personnages et les mondes imaginaires. 
         Que vous soyez un fan de longue date ou que vous découvriez tout juste cet univers des mangas et des animes, notre blog est là pour vous offrir une expérience enrichissante et divertissante.
       !!!</p>

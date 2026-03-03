@@ -362,4 +362,40 @@ export const articles:Article[] = [
     content: "Un jeune homme est transporté dans un monde fantastique où il doit recommencer sa vie à chaque fois qu'il meurt...",
     excerpt: "Un jeune homme est transporté dans un monde fantastique où il doit recommencer sa vie à chaque fois qu'il meurt. Le jeune Subaru Natsuki est un lycéen qui, après avoir été transporté dans un monde fantastique, doit survivre à des situations extrêmes et découvrir les secrets de ce monde. Une histoire pleine de mystère, d'action, et de réflexion."
   },
+  {
+    id: 12,
+    title: "The Promised Neverland",
+    author: "Takumi Sato",
+    category: "shonen",
+    cover: "https://tse2.mm.bing.net/th/id/OIP.VythZNEp-WRPBJfQJkS7sQHaKc?rs=1&pid=ImgDetMain&o=7&rm=3",
+    content: "Un groupe d'enfants découvre la vérité sur leur refuge...",
+    excerpt: "Un groupe d'enfants découvre la vérité sur leur refuge. Les enfants de l'orphelinat Neverland, dirigés par une jeune femme nommée Emma, découvrent que leur refuge n'est qu'une illusion et qu'ils sont en réalité des expériences de laboratoire. Une histoire pleine de mystère, d'action, et de réflexion."
+  },
+  {
+    id: 13,
+    title: "Hunter x Hunter",
+    author: "Yoshihiro Togashi",
+    category: "Shonen",
+    cover: "https://tse3.mm.bing.net/th/id/OIP.eLM6NeQLWdFN6Tfj06pwPgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
+    content: "Un jeune garçon rêve de devenir chasseur de monstres...",
+    excerpt: "Un jeune garçon rêve de devenir chasseur de monstres. Gon Freecss est un jeune garçon qui, après avoir découvert l'existence d'un monde parallèle rempli de monstres, souhaite devenir chasseur de monstres pour prouver sa valeur et atteindre ses objectifs. Une histoire pleine d'action, d'aventure, et d'émotion."
+  },
+  {
+    id: 14,
+    title: "Berserk",
+    author: "Kentaro Miura",
+    category: "Seinen",
+    cover: "https://tse1.mm.bing.net/th/id/OIP.FWfaTShHz_Nx8GVxFr3_OQHaDt?rs=1&pid=ImgDetMain&o=7&rm=3",
+    content: "Un jeune homme est traqué par des forces surnaturelles...",
+    excerpt: "Un jeune homme est traqué par des forces surnaturelles. Guts est un jeune homme qui, après avoir été abandonné par son groupe de guerriers, doit survivre à des forces surnaturelles et à des combats épique. Une histoire pleine de mystère, d'action, et de réflexion."
+  },
+  {
+    id: 15,
+    title: "Mushoku Tensei",
+    author: "Yuki Kajiura",
+    category: "Isekai",
+    cover: "https://tse3.mm.bing.net/th/id/OIP.zR6G9EfGJNGHBGBRBi7_EgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
+    content: "Un jeune homme est transporté dans un monde fantastique où il doit recommencer sa vie à chaque fois qu'il meurt...",
+    excerpt: "Un jeune homme est transporté dans un monde fantastique où il doit recommencer sa vie à chaque fois qu'il meurt. Le jeune Subaru Natsuki est un lycéen qui, après avoir été transporté dans un monde fantastique, doit survivre à des situations extrêmes et découvrir les secrets de ce monde. Une histoire pleine de mystère, d'action, et de réflexion."
+  }
 ];

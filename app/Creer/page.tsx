@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Creer() {
   const [formData, setFormData] = useState({
     titre: "",
@@ -50,8 +50,8 @@ export default function Creer() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-base-200 p-4">
-        <div className="card w-full max-w-lg bg-base-100 shadow-xl">
+      <div className="min-h-screen flex items-center justify-center bg-base-200 p-4 rounded-lg">
+        <div className="card w-full max-w-lg bg-blue-100 shadow-xl">
           <div className="card-body text-center">
             <div className="text-6xl mb-4">✅</div>
             <h2 className="card-title text-2xl justify-center mb-2">
@@ -72,9 +72,9 @@ export default function Creer() {
               >
                 Créer un autre article
               </button>
-              <a href="/Articles" className="btn btn-outline">
+              <Link href="/Articles" className="btn btn-outline">
                 Voir les articles
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -83,9 +83,9 @@ export default function Creer() {
   }
 
   return (
-    <div className="min-h-screen bg-base-200 p-4">
-      <div className="max-w-2xl mx-auto">
-        <div className="card bg-base-100 shadow-xl">
+    <div className="min-h-screen bg-base-200 p-4 mt-18">
+      <div className="max-w-2xl mx-auto ">
+        <div className="card bg-base-100 shadow-xl bg-gradient-to-r from-blue-100 to-pink-150">
           <div className="card-body">
             <h2 className="card-title text-2xl font-bold mb-6">
               ✍️ Créer un nouvel article
@@ -101,7 +101,7 @@ export default function Creer() {
                   type="text"
                   name="titre"
                   placeholder="Entrez le titre de votre article"
-                  className="input input-bordered w-full"
+                  className="input input-bordered w-full rounded-lg"
                   value={formData.titre}
                   onChange={handleChange}
                   required
@@ -115,7 +115,7 @@ export default function Creer() {
                 </label>
                 <select
                   name="categorie"
-                  className="select select-bordered w-full"
+                  className="select select-bordered w-full rounded-lg"
                   value={formData.categorie}
                   onChange={handleChange}
                   required
@@ -136,7 +136,7 @@ export default function Creer() {
                 <input
                   type="file"
                   accept="image/*"
-                  className="file-input file-input-bordered w-full"
+                  className="file-input file-input-bordered w-full rounded-lg"
                   onChange={handleImageChange}
                 />
                 {imagePreview && (
@@ -169,7 +169,7 @@ export default function Creer() {
 
               {/* Bouton de soumission */}
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary w-full text-lg">
+                <button type="submit" className="btn btn-primary w-full text-lg rounded-full bg-gradient-to-b from-pink-300 to-blue-300 hover:from-pink-500 hover:to-blue-500">
                   Publier l&apos;article
                 </button>
               </div>

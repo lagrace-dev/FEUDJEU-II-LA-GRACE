@@ -15,11 +15,11 @@ export default async function ArticlesPage({ searchParams }: PageProps) {
       )
     : articles;
 
-  const categories = ["Tous", "Shonen", "Seinen", "Shojo", "Isekai"];
+  const categories = ["Tous", "Shonen", "Seinen", "Shojo", "Isekai", "hentai"];
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Liste des articles</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center text-primary mt-14">Tout Voir et Tout Savoir sur vos Animés et Mangas du moment</h1>
 
       {/* Filtres par catégorie */}
       <div className="flex flex-wrap gap-2 mb-6">

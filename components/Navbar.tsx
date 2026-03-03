@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="drawer-content flex flex-col">
 
         {/* NAVBAR */}
-        <div className="navbar bg-base-100 shadow-sm w-full">
+        <div className="navbar bg-base-100 fixed z-50 shadow-sm w-full bg-gradient-to-r from-pink-150 to-pink-200">
 
           {/* MOBILE BURGER */}
           <div className="navbar-start">
@@ -37,8 +37,8 @@ export default function Navbar() {
               </label>
             </div>
 
-            <Link href="/" className="btn btn-ghost text-xl">
-              daisyUI
+            <Link href="/" className="btn btn-ghost text-xl text-red-400 font-bold">
+              LG*ANIME
             </Link>
           </div>
 
@@ -57,15 +57,16 @@ export default function Navbar() {
                 </details>
               </li>
 
+
               <li><Link href="/item3">Item 3</Link></li>
             </ul>
           </div>
 
           {/* BOUTON DROITE */}
           <div className="navbar-end gap-3">
-            <Link href="/" className="btn btn-primary-btn btn-sm">Accueil</Link>
-            <Link href="/Connexion" className="btn btn-outline btn-sm">Creer</Link>
-            <Link href="/Articles" className="btn btn-outline btn-sm">Articles</Link>
+            <Link href="/" className="btn btn-outline btn-sm bg-white rounded-lg">Accueil</Link>
+            <Link href="/Connexion" className="btn btn-outline btn-sm bg-white rounded-lg">Creer</Link>
+            <Link href="/Articles" className="btn btn-outline btn-sm bg-white rounded-lg">Articles</Link>
           </div>
 
         </div>
